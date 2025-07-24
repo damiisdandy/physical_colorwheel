@@ -17,18 +17,9 @@ void setup() {
   pinMode(REDPIN, OUTPUT);
   pinMode(GREENPIN, OUTPUT);
   pinMode(BLUEPIN, OUTPUT);
-  Serial.begin(9600);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  // setColor(255,0,0);
-  // delay(500);
-  // setColor(0, 255,0);
-  // delay(500);
-  // setColor(0,0, 255);
-  // delay(500);
-
   int xReading = analogRead(XAXIS);
   int yReading = analogRead(YAXIS);
 
@@ -41,6 +32,7 @@ void loop() {
   delay(RESPONSE_DELAY);
 }
 
+//Set RGB colors
 void setColor(int redValue, int greenValue, int blueValue) {
   analogWrite(REDPIN, redValue);
   analogWrite(GREENPIN, greenValue);
